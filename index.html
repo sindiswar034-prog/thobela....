@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thobela Attorneys, Notaries &amp; Conveyancers</title>
+<meta content="Premier South African legal practice established in 2006 in Nelspruit / Mbombela. High Court litigation, conveyancing, notarial deeds, commercial law, and institutional panel counsel." name="description"/>
+<meta content="Thobela Attorneys, Notaries &amp; Conveyancers" property="og:title"/>
+<meta content="Premier South African legal practice established in 2006 in Nelspruit / Mbombela. High Court litigation, conveyancing, notarial deeds, commercial law, and institutional panel counsel." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet"/>
+<script defer="" src="assets/index-CSl0osV_.js"></script>
+<link href="assets/index-BDKc6h7g.css" rel="stylesheet"/>
+<style>
+/* Shared active navigation state */
+header nav a[data-active="true"],header nav a[aria-current="page"],header nav a[aria-current="location"],header .nav-page-link[data-active="true"]{color:#292661!important;font-weight:800!important;border-bottom:3px solid #e84239;padding-bottom:5px}
+header nav a[data-active="true"]:focus-visible{outline:2px solid #e84239;outline-offset:4px}
+@media(max-width:767px){header nav a[data-active="true"]{border-bottom:0;border-left:4px solid #e84239;padding-left:10px}}
+</style></head>
+<body class="bg-white text-[#1A2F4C] antialiased font-sans selection:bg-[#1B2E4B] selection:text-white">
+<div id="root"></div>
+<script>
+(function(){
+ const sections={'#about':'about','#attorneys':'attorneys','#work-experience':'work-experience','#sla':'sla','#contact':'contact'};
+ function refresh(){
+  const header=document.querySelector('#root header');if(!header)return;
+  const links=header.querySelectorAll('nav a');
+  const hash=window.location.hash.toLowerCase();
+  links.forEach(function(link){
+   const href=link.getAttribute('href')||'';
+   const active=hash ? (href===hash && !!sections[hash]) : (href==='index.html');
+   link.dataset.active=active?'true':'false';
+   if(active)link.setAttribute('aria-current',hash?'location':'page');else link.removeAttribute('aria-current');
+  });
+  // Contact is a React button rather than an anchor on the home page.
+  header.querySelectorAll('button').forEach(function(btn){
+   if(btn.textContent.trim().toLowerCase()==='contact us'){
+    btn.setAttribute('aria-current',hash==='#contact'?'location':'false');
+    btn.style.outline=hash==='#contact'?'3px solid #e84239':'';
+    btn.style.outlineOffset=hash==='#contact'?'3px':'';
+   }
+  });
+ }
+ document.addEventListener('DOMContentLoaded',function(){
+  const root=document.getElementById('root');
+  if(root){const observer=new MutationObserver(function(){refresh()});observer.observe(root,{childList:true,subtree:false});}
+  refresh();
+  document.addEventListener('click',function(e){const a=e.target.closest('a');if(a&&a.closest('header'))setTimeout(refresh,20)});
+  window.addEventListener('hashchange',refresh);
+ });
+})();
+</script></body>
+</html>
